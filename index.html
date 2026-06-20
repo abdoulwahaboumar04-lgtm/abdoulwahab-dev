@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth max-w-screen w-screen overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -105,6 +105,15 @@
             background-color: var(--primary);
             color: #FFFFFF;
             overflow-x: hidden;
+        }
+        input, textarea, select{
+            font-size:16px;
+        }
+
+        @media (max-width: 786px){
+            input, textarea, select{
+                font-size:16px;
+            }
         }
 
         /* Glassmorphism */
