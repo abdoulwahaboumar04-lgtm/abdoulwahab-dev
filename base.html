@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdoulwahab Oumar | Premium Full Stack Developer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Abdoulwahab Oumar is a Premium Full Stack Developer specializing in Python, Django, React, HTMX, and Alpine.js. Delivering enterprise-quality web applications, ecommerce solutions, and real-time systems.">
+    <meta name="keywords" content="Abdoulwahab Oumar, Python Developer, Django Developer, React Developer, HTMX Developer, Alpine.js Developer, Full Stack Developer, Web Developer Cameroon, Dashboard Developer, Ecommerce Developer, Restaurant Website Developer, Barber Shop Website Developer, WebSocket Developer">
+    <meta name="author" content="Abdoulwahab Oumar">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://abdoulwahaboumar.com">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Abdoulwahab Oumar | Premium Full Stack Developer">
+    <meta property="og:description" content="Enterprise-quality web applications by Abdoulwahab Oumar. Python, Django, and modern frontend technologies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abdoulwahaboumar.com">
+    <meta property="og:image" content="https://abdoulwahaboumar.com/og-image.jpg">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Abdoulwahab Oumar | Premium Full Stack Developer">
+    <meta name="twitter:description" content="Building fast, scalable, and modern web applications.">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Abdoulwahab Oumar",
+      "jobTitle": "Full Stack Developer",
+      "url": "https://abdoulwahaboumar.com",
+      "sameAs": [
+        "https://github.com/abdoulwahaboumar",
+        "https://linkedin.com/in/abdoulwahaboumar"
+      ],
+      "knowsAbout": ["Python", "Django", "React", "HTMX", "Alpine.js", "WebSockets"]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F172A',
+                        secondary: '#1E293B',
+                        royal: '#2563EB',
+                        gold: '#FFD700',
+                        muted: '#94A3B8',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'spin-slow': 'spin 8s linear infinite',
+                        'pulse-glow': 'pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { opacity: 1, filter: 'drop-shadow(0 0 10px rgba(37, 99, 235, 0.5))' },
+                            '50%': { opacity: .7, filter: 'drop-shadow(0 0 20px rgba(37, 99, 235, 0.9))' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Libraries -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --primary: #0F172A;
+            --secondary: #1E293B;
+            --royal: #2563EB;
+            --gold: #FFD700;
+        }
+        
+        body {
+            background-color: var(--primary);
+            color: #FFFFFF;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .glass-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(37, 99, 235, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Gradients */
+        .text-gradient {
+            background: linear-gradient(to right, #60A5FA, #2563EB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-gradient-gold {
+            background: linear-gradient(to right, #FFD700, #FBBF24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Mouse Glow */
+        #mouse-glow {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--primary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--royal);
+        }
+
+        /* Scroll Progress Bar */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(to right, var(--royal), var(--gold));
+            z-index: 10000;
+            transition: width 0.1s ease;
+        }
+
+        /* Particles Canvas */
+        #particles-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Loader */
+        .loader-text {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 3s linear forwards;
+        }
+        @keyframes dash {
+            to { stroke-dashoffset: 0; }
+        }
+
+        /* Base Utilities */
+        .z-content { z-index: 10; position: relative; }
+    </style>
+</head>
+<body class="antialiased selection:bg-royal selection:text-white" x-data="{ loading: true, mobileMenuOpen: false }" x-init="setTimeout(() => loading = false, 2500)">
+
+    <!-- Mouse Glow -->
+    <div id="mouse-glow" class="hidden lg:block"></div>
+
+    <!-- Scroll Progress -->
+    <div id="scroll-progress"></div>
+
+    <!-- Particles Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Loading Screen -->
+    <div x-show="loading" x-transition:leave="transition ease-in duration-500" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 z-[9999] bg-primary flex flex-col items-center justify-center">
+        <div class="relative w-32 h-32 flex items-center justify-center mb-8">
+            <div class="absolute inset-0 border-t-2 border-gold rounded-full animate-spin"></div>
+            <div class="absolute inset-2 border-r-2 border-royal rounded-full animate-spin-slow"></div>
+            <span class="text-4xl font-display font-bold text-gradient-gold">AO</span>
+        </div>
+        <h1 class="text-2xl font-display tracking-widest text-white/80 animate-pulse">ABDOULWAHAB OUMAR</h1>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-display font-bold flex items-center gap-2 group">
+                        <span class="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center border border-white/10 group-hover:border-gold/50 transition-colors">
+                            <span class="text-gradient-gold">AO</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-sm font-medium text-white/80 hover:text-white hover:text-gradient transition-all">Home</a>
+                        <a href="#about" class="text-sm font-medium text-white/80 hover:text-white hover:text-gradient transition-all">About</a>
+                        <a href="#skills" class="text-sm font-medium text-white/80 hover:text-white hover:text-gradient transition-all">Skills</a>
+                        <a href="#services" class="text-sm font-medium text-white/80 hover:text-white hover:text-gradient transition-all">Services</a>
+                        <a href="#projects" class="text-sm font-medium text-white/80 hover:text-white hover:text-gradient transition-all">Projects</a>
+                        <a href="#experience" class="text-sm font-medium text-white/80 hover:text-white hover:text-gradient transition-all">Experience</a>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="px-6 py-2.5 rounded-full bg-royal hover:bg-blue-700 text-white font-medium text-sm transition-all shadow-[0_0_15px_rgba(37,99,235,0.4)] hover:shadow-[0_0_25px_rgba(37,99,235,0.6)]">
+                        Hire Me
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-white/80 hover:text-white hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-primary focus:ring-white">
+                        <span class="sr-only">Open main menu</span>
+                        <i data-lucide="menu" x-show="!mobileMenuOpen" class="block h-6 w-6"></i>
+                        <i data-lucide="x" x-show="mobileMenuOpen" class="block h-6 w-6" style="display: none;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="md:hidden glass absolute w-full border-t border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-secondary">Home</a>
+                <a href="#about" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-md text-base font-medium text-white/80 hover:text-white hover:bg-secondary">About</a>
+                <a href="#skills" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-md text-base font-medium text-white/80 hover:text-white hover:bg-secondary">Skills</a>
+                <a href="#services" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-md text-base font-medium text-white/80 hover:text-white hover:bg-secondary">Services</a>
+                <a href="#projects" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-md text-base font-medium text-white/80 hover:text-white hover:bg-secondary">Projects</a>
+                <a href="#contact" @click="mobileMenuOpen = false" class="block px-3 py-2 mt-4 text-center rounded-md text-base font-medium bg-royal text-white">Hire Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden z-content">
+        <!-- Background Blur Blobs -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-royal/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+        <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-gold/10 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <!-- Left Content -->
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-6">
+                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                        <span class="text-xs font-medium text-white/80 tracking-wider uppercase">Available For Freelance</span>
+                    </div>
+                    
+                    <h2 class="text-2xl md:text-3xl font-display text-muted mb-2">Hi, I'm</h2>
+                    <h1 class="text-5xl md:text-7xl font-display font-bold mb-4 tracking-tight">
+                        Abdoulwahab Oumar
+                    </h1>
+                    
+                    <div class="h-14 md:h-20 mb-6">
+                        <h3 class="text-3xl md:text-5xl font-bold text-gradient">
+                            <span id="typewriter"></span>
+                            <span class="animate-pulse">|</span>
+                        </h3>
+                    </div>
+
+                    <p class="text-lg text-muted mb-8 max-w-xl leading-relaxed">
+                        I build fast, scalable and modern web applications using Python, Django, HTMX, Alpine.js, React, JavaScript and TailwindCSS. Transforming complex business needs into elegant digital solutions.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-4">
+                        <a href="#contact" class="px-8 py-4 rounded-lg bg-royal hover:bg-blue-700 text-white font-medium transition-all shadow-[0_0_20px_rgba(37,99,235,0.4)] flex items-center gap-2">
+                            Hire Me <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#projects" class="px-8 py-4 rounded-lg glass hover:bg-white/10 text-white font-medium transition-all flex items-center gap-2">
+                            View Projects
+                        </a>
+                        <a href="#" class="px-8 py-4 rounded-lg border border-white/10 hover:border-gold/50 text-white font-medium transition-all flex items-center gap-2 group">
+                            Download CV <i data-lucide="download" class="w-5 h-5 group-hover:text-gold transition-colors"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Content (Visuals) -->
+                <div class="relative hidden lg:block h-[600px] w-full" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <!-- Central Element -->
+                        <div class="w-64 h-64 rounded-full border border-white/10 glass flex items-center justify-center relative animate-pulse-glow z-20">
+                            <i data-lucide="code-2" class="w-24 h-24 text-royal opacity-80"></i>
+                            
+                            <!-- Orbiting Tech Cards -->
+                            <!-- Python -->
+                            <div class="absolute -top-6 left-1/2 -translate-x-1/2 px-4 py-2 rounded-lg glass-card text-sm font-medium flex items-center gap-2 animate-bounce" style="animation-duration: 3s;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-5 h-5" alt="Python"> Python
+                            </div>
+                            <!-- Django -->
+                            <div class="absolute top-1/2 -right-12 -translate-y-1/2 px-4 py-2 rounded-lg glass-card text-sm font-medium flex items-center gap-2 animate-bounce" style="animation-duration: 4s;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" class="w-5 h-5 filter invert" alt="Django"> Django
+                            </div>
+                            <!-- React -->
+                            <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 px-4 py-2 rounded-lg glass-card text-sm font-medium flex items-center gap-2 animate-bounce" style="animation-duration: 3.5s;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-5 h-5" alt="React"> React
+                            </div>
+                            <!-- HTMX (Text representation) -->
+                            <div class="absolute top-1/2 -left-12 -translate-y-1/2 px-4 py-2 rounded-lg glass-card text-sm font-medium flex items-center gap-2 font-bold animate-bounce" style="animation-duration: 4.5s;">
+                                <span class="text-blue-400">&lt;/&gt;</span> HTMX
+                            </div>
+                        </div>
+
+                        <!-- Background Rings -->
+                        <div class="absolute w-96 h-96 rounded-full border border-white/5 border-dashed animate-spin-slow"></div>
+                        <div class="absolute w-[500px] h-[500px] rounded-full border border-royal/20 animate-spin-slow" style="animation-direction: reverse; animation-duration: 15s;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 border-y border-white/10 bg-secondary/30 backdrop-blur-md z-content relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/10">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="0">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-white mb-2"><span class="counter" data-target="20">0</span>+</div>
+                    <div class="text-sm text-muted uppercase tracking-wider">Projects Completed</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-white mb-2"><span class="counter" data-target="5">0</span>+</div>
+                    <div class="text-sm text-muted uppercase tracking-wider">Business Solutions</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-white mb-2"><span class="counter" data-target="100">0</span>%</div>
+                    <div class="text-sm text-muted uppercase tracking-wider">Responsive Websites</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-white mb-2 text-gradient-gold">24/7</div>
+                    <div class="text-sm text-muted uppercase tracking-wider">Learning Mindset</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 z-content relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative" data-aos="fade-right">
+                    <div class="absolute inset-0 bg-gradient-to-r from-royal to-purple-600 rounded-2xl transform rotate-3 opacity-20 blur-lg"></div>
+                    <div class="glass p-8 rounded-2xl relative">
+                        <i data-lucide="terminal" class="w-12 h-12 text-royal mb-6"></i>
+                        <h3 class="text-2xl font-display font-bold mb-4">My Passion For Software Engineering</h3>
+                        <p class="text-muted leading-relaxed mb-4">
+                            I am dedicated to crafting high-performance, robust backend systems and seamless, interactive frontend experiences. My journey is fueled by a commitment to problem-solving and automating business processes.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-white/90">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-gold"></i> Business Automation
+                            </li>
+                            <li class="flex items-center gap-3 text-white/90">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-gold"></i> Modern Web Development
+                            </li>
+                            <li class="flex items-center gap-3 text-white/90">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-gold"></i> Real Time Applications
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h2 class="text-sm font-bold tracking-widest text-royal uppercase mb-2">Who I Am</h2>
+                    <h3 class="text-3xl md:text-4xl font-display font-bold mb-6">Bridging the gap between design and robust engineering.</h3>
+                    <div class="space-y-6 text-muted leading-relaxed">
+                        <p>
+                            Based in Cameroon, I specialize in full-stack development, utilizing the power of Python and Django for rock-solid backends, and modern tools like React, HTMX, and Alpine.js for highly reactive user interfaces.
+                        </p>
+                        <p>
+                            My mission is to help businesses transition into the digital space with tools that actually make a difference. From custom E-commerce platforms to bespoke Dashboard solutions and Real-time chat applications using WebSockets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-secondary/20 z-content relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold tracking-widest text-royal uppercase mb-2">Expertise</h2>
+                <h3 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">Technical Arsenal</h3>
+                <p class="text-muted">A comprehensive overview of the technologies and tools I use to build enterprise-grade applications.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Frontend -->
+                <div class="glass-card p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-12 h-12 bg-royal/20 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="layout" class="w-6 h-6 text-royal"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-6">Frontend Development</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1"><span>React.js / JavaScript</span><span class="text-gold">90%</span></div>
+                            <div class="w-full bg-primary rounded-full h-1.5"><div class="bg-gradient-to-r from-royal to-blue-400 h-1.5 rounded-full" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1"><span>TailwindCSS</span><span class="text-gold">95%</span></div>
+                            <div class="w-full bg-primary rounded-full h-1.5"><div class="bg-gradient-to-r from-royal to-blue-400 h-1.5 rounded-full" style="width: 95%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1"><span>HTMX / Alpine.js</span><span class="text-gold">85%</span></div>
+                            <div class="w-full bg-primary rounded-full h-1.5"><div class="bg-gradient-to-r from-royal to-blue-400 h-1.5 rounded-full" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1"><span>HTML5 / CSS3</span><span class="text-gold">95%</span></div>
+                            <div class="w-full bg-primary rounded-full h-1.5"><div class="bg-gradient-to-r from-royal to-blue-400 h-1.5 rounded-full" style="width: 95%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="glass-card p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="database" class="w-6 h-6 text-green-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-6">Backend Development</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1"><span>Python</span><span class="text-gold">90%</span></div>
+                            <div class="w-full bg-primary rounded-full h-1.5"><div class="bg-gradient-to-r from-green-500 to-emerald-400 h-1.5 rounded-full" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1"><span>Django / DRF</span><span class="text-gold">90%</span></div>
+                            <div class="w-full bg-primary rounded-full h-1.5"><div class="bg-gradient-to-r from-green-500 to-emerald-400 h-1.5 rounded-full" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1"><span>PostgreSQL</span><span class="text-gold">80%</span></div>
+                            <div class="w-full bg-primary rounded-full h-1.5"><div class="bg-gradient-to-r from-green-500 to-emerald-400 h-1.5 rounded-full" style="width: 80%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1"><span>Auth & Security</span><span class="text-gold">85%</span></div>
+                            <div class="w-full bg-primary rounded-full h-1.5"><div class="bg-gradient-to-r from-green-500 to-emerald-400 h-1.5 rounded-full" style="width: 85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real-Time & Tools -->
+                <div class="glass-card p-8 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="zap" class="w-6 h-6 text-purple-500"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-6">Real-Time & Tools</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1"><span>WebSockets / Channels</span><span class="text-gold">85%</span></div>
+                            <div class="w-full bg-primary rounded-full h-1.5"><div class="bg-gradient-to-r from-purple-500 to-fuchsia-400 h-1.5 rounded-full" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1"><span>Git / GitHub</span><span class="text-gold">90%</span></div>
+                            <div class="w-full bg-primary rounded-full h-1.5"><div class="bg-gradient-to-r from-purple-500 to-fuchsia-400 h-1.5 rounded-full" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1"><span>Linux / VS Code</span><span class="text-gold">85%</span></div>
+                            <div class="w-full bg-primary rounded-full h-1.5"><div class="bg-gradient-to-r from-purple-500 to-fuchsia-400 h-1.5 rounded-full" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1"><span>Figma UI/UX</span><span class="text-gold">75%</span></div>
+                            <div class="w-full bg-primary rounded-full h-1.5"><div class="bg-gradient-to-r from-purple-500 to-fuchsia-400 h-1.5 rounded-full" style="width: 75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tech Stack Showcase -->
+            <div class="mt-20 flex flex-wrap justify-center gap-8 opacity-70">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-12 h-12 hover:scale-125 hover:opacity-100 transition-all cursor-pointer filter grayscale hover:grayscale-0" alt="Python" title="Python">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" class="w-12 h-12 hover:scale-125 hover:opacity-100 transition-all cursor-pointer filter invert opacity-80 hover:opacity-100" alt="Django" title="Django">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-12 h-12 hover:scale-125 hover:opacity-100 transition-all cursor-pointer filter grayscale hover:grayscale-0" alt="React" title="React">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 h-12 hover:scale-125 hover:opacity-100 transition-all cursor-pointer filter grayscale hover:grayscale-0" alt="JS" title="JavaScript">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" class="w-12 h-12 hover:scale-125 hover:opacity-100 transition-all cursor-pointer filter grayscale hover:grayscale-0" alt="Tailwind" title="TailwindCSS">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="w-12 h-12 hover:scale-125 hover:opacity-100 transition-all cursor-pointer filter grayscale hover:grayscale-0" alt="PostgreSQL" title="PostgreSQL">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-12 h-12 hover:scale-125 hover:opacity-100 transition-all cursor-pointer filter grayscale hover:grayscale-0" alt="Git" title="Git">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 z-content relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold tracking-widest text-royal uppercase mb-2">What I Do</h2>
+                <h3 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">Premium Services</h3>
+                <p class="text-muted">Tailored digital solutions to elevate your business operations and online presence.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service Cards -->
+                <div class="glass p-6 rounded-xl hover:bg-white/5 transition-colors group" data-aos="fade-up" data-aos-delay="0">
+                    <i data-lucide="layers" class="w-8 h-8 text-royal mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-lg font-bold mb-2 text-white">Full Stack Development</h4>
+                    <p class="text-sm text-muted">End-to-end development of robust web applications tailored to your specific needs.</p>
+                </div>
+                <div class="glass p-6 rounded-xl hover:bg-white/5 transition-colors group" data-aos="fade-up" data-aos-delay="50">
+                    <i data-lucide="shopping-cart" class="w-8 h-8 text-royal mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-lg font-bold mb-2 text-white">Ecommerce Development</h4>
+                    <p class="text-sm text-muted">Scalable online stores with secure checkout, product management, and orders tracking.</p>
+                </div>
+                <div class="glass p-6 rounded-xl hover:bg-white/5 transition-colors group" data-aos="fade-up" data-aos-delay="100">
+                    <i data-lucide="layout-dashboard" class="w-8 h-8 text-royal mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-lg font-bold mb-2 text-white">Dashboard Development</h4>
+                    <p class="text-sm text-muted">Complex data visualization and administrative panels for enterprise control.</p>
+                </div>
+                <div class="glass p-6 rounded-xl hover:bg-white/5 transition-colors group" data-aos="fade-up" data-aos-delay="150">
+                    <i data-lucide="utensils" class="w-8 h-8 text-royal mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-lg font-bold mb-2 text-white">Restaurant Systems</h4>
+                    <p class="text-sm text-muted">Digital menus, order management, and reservation systems for modern dining.</p>
+                </div>
+                <div class="glass p-6 rounded-xl hover:bg-white/5 transition-colors group" data-aos="fade-up" data-aos-delay="200">
+                    <i data-lucide="scissors" class="w-8 h-8 text-royal mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-lg font-bold mb-2 text-white">Barber Shop Websites</h4>
+                    <p class="text-sm text-muted">Automated appointment booking and customer notification systems.</p>
+                </div>
+                <div class="glass p-6 rounded-xl hover:bg-white/5 transition-colors group" data-aos="fade-up" data-aos-delay="250">
+                    <i data-lucide="globe" class="w-8 h-8 text-royal mb-4 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-lg font-bold mb-2 text-white">Custom Web Solutions</h4>
+                    <p class="text-sm text-muted">API Development, Real-Time applications (WebSockets), and premium portfolios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="py-24 bg-secondary/20 z-content relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16" data-aos="fade-up">
+                <div class="max-w-2xl">
+                    <h2 class="text-sm font-bold tracking-widest text-royal uppercase mb-2">Portfolio</h2>
+                    <h3 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">Featured Projects</h3>
+                    <p class="text-muted">A selection of my recent work showcasing technical capability and design aesthetic.</p>
+                </div>
+                <a href="https://github.com/abdoulwahaboumar" target="_blank" class="hidden md:flex items-center gap-2 text-white hover:text-royal transition-colors font-medium">
+                    View GitHub <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 bg-secondary relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent z-10"></div>
+                        <!-- Mockup placeholder -->
+                        <div class="absolute inset-4 bg-primary rounded-t-xl border-t border-x border-white/10 shadow-2xl overflow-hidden flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
+                            <i data-lucide="shopping-bag" class="w-16 h-16 text-white/20"></i>
+                        </div>
+                    </div>
+                    <div class="p-8 relative z-20">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold text-white">Modern Ecommerce Platform</h4>
+                            <div class="flex gap-2">
+                                <a href="#" class="p-2 rounded-full bg-white/5 hover:bg-white/20 transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
+                                <a href="#" class="p-2 rounded-full bg-royal hover:bg-blue-600 transition-colors text-white"><i data-lucide="external-link" class="w-4 h-4"></i></a>
+                            </div>
+                        </div>
+                        <p class="text-sm text-muted mb-6">A full-featured online store with product management, secure cart & checkout, order tracking, and a comprehensive admin dashboard.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 rounded bg-white/10 text-white/90">Products</span>
+                            <span class="text-xs px-2 py-1 rounded bg-white/10 text-white/90">Cart & Checkout</span>
+                            <span class="text-xs px-2 py-1 rounded bg-white/10 text-white/90">Dashboard</span>
+                        </div>
+                        <div class="flex flex-wrap gap-3 mt-4 pt-4 border-t border-white/10">
+                            <span class="text-xs font-medium text-royal">Django</span>
+                            <span class="text-xs font-medium text-blue-400">React</span>
+                            <span class="text-xs font-medium text-green-400">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-64 bg-secondary relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent z-10"></div>
+                        <div class="absolute inset-4 bg-primary rounded-t-xl border-t border-x border-white/10 shadow-2xl overflow-hidden flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
+                            <i data-lucide="utensils" class="w-16 h-16 text-white/20"></i>
+                        </div>
+                    </div>
+                    <div class="p-8 relative z-20">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold text-white">Restaurant Management</h4>
+                            <div class="flex gap-2">
+                                <a href="#" class="p-2 rounded-full bg-white/5 hover:bg-white/20 transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
+                                <a href="#" class="p-2 rounded-full bg-royal hover:bg-blue-600 transition-colors text-white"><i data-lucide="external-link" class="w-4 h-4"></i></a>
+                            </div>
+                        </div>
+                        <p class="text-sm text-muted mb-6">Digital system managing real-time orders, dynamic menus, customer reservations, and staff workflows for optimized dining.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 rounded bg-white/10 text-white/90">Orders</span>
+                            <span class="text-xs px-2 py-1 rounded bg-white/10 text-white/90">Menu API</span>
+                            <span class="text-xs px-2 py-1 rounded bg-white/10 text-white/90">Reservations</span>
+                        </div>
+                        <div class="flex flex-wrap gap-3 mt-4 pt-4 border-t border-white/10">
+                            <span class="text-xs font-medium text-royal">Django</span>
+                            <span class="text-xs font-medium text-blue-400">HTMX</span>
+                            <span class="text-xs font-medium text-teal-400">Alpine.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="fade-up">
+                    <div class="h-64 bg-secondary relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent z-10"></div>
+                        <div class="absolute inset-4 bg-primary rounded-t-xl border-t border-x border-white/10 shadow-2xl overflow-hidden flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
+                            <i data-lucide="scissors" class="w-16 h-16 text-white/20"></i>
+                        </div>
+                    </div>
+                    <div class="p-8 relative z-20">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold text-white">Barber Shop Booking</h4>
+                            <div class="flex gap-2">
+                                <a href="#" class="p-2 rounded-full bg-white/5 hover:bg-white/20 transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
+                                <a href="#" class="p-2 rounded-full bg-royal hover:bg-blue-600 transition-colors text-white"><i data-lucide="external-link" class="w-4 h-4"></i></a>
+                            </div>
+                        </div>
+                        <p class="text-sm text-muted mb-6">Interactive scheduling app providing real-time slot availability, instant booking notifications, and customer profiles.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 rounded bg-white/10 text-white/90">Appointments</span>
+                            <span class="text-xs px-2 py-1 rounded bg-white/10 text-white/90">Live Notifications</span>
+                        </div>
+                        <div class="flex flex-wrap gap-3 mt-4 pt-4 border-t border-white/10">
+                            <span class="text-xs font-medium text-royal">Django</span>
+                            <span class="text-xs font-medium text-purple-400">WebSockets</span>
+                            <span class="text-xs font-medium text-blue-400">HTMX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-64 bg-secondary relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent z-10"></div>
+                        <div class="absolute inset-4 bg-primary rounded-t-xl border-t border-x border-white/10 shadow-2xl overflow-hidden flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
+                            <i data-lucide="monitor" class="w-16 h-16 text-white/20"></i>
+                        </div>
+                    </div>
+                    <div class="p-8 relative z-20">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold text-white">Premium Portfolio Template</h4>
+                            <div class="flex gap-2">
+                                <a href="#" class="p-2 rounded-full bg-white/5 hover:bg-white/20 transition-colors"><i data-lucide="github" class="w-4 h-4"></i></a>
+                                <a href="#" class="p-2 rounded-full bg-royal hover:bg-blue-600 transition-colors text-white"><i data-lucide="external-link" class="w-4 h-4"></i></a>
+                            </div>
+                        </div>
+                        <p class="text-sm text-muted mb-6">A luxury, SEO-optimized personal portfolio with glassmorphism UI, advanced animations, and perfect lighthouse scores.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 rounded bg-white/10 text-white/90">SEO</span>
+                            <span class="text-xs px-2 py-1 rounded bg-white/10 text-white/90">Performance</span>
+                            <span class="text-xs px-2 py-1 rounded bg-white/10 text-white/90">Responsive</span>
+                        </div>
+                        <div class="flex flex-wrap gap-3 mt-4 pt-4 border-t border-white/10">
+                            <span class="text-xs font-medium text-orange-400">HTML5</span>
+                            <span class="text-xs font-medium text-cyan-400">TailwindCSS</span>
+                            <span class="text-xs font-medium text-yellow-400">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center md:hidden">
+                <a href="https://github.com/abdoulwahaboumar" target="_blank" class="inline-flex items-center gap-2 text-royal hover:text-blue-400 transition-colors font-medium">
+                    View All on GitHub <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Me & Process -->
+    <section class="py-24 z-content relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Why Work With Me -->
+                <div data-aos="fade-right">
+                    <h2 class="text-sm font-bold tracking-widest text-royal uppercase mb-2">Benefits</h2>
+                    <h3 class="text-3xl font-display font-bold text-white mb-8">Why Work With Me</h3>
+                    <div class="space-y-4">
+                        <div class="glass p-4 rounded-xl flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-royal/20 flex items-center justify-center shrink-0"><i data-lucide="zap" class="w-5 h-5 text-royal"></i></div>
+                            <div><h4 class="font-bold">Fast Delivery</h4><p class="text-xs text-muted">Efficient workflows ensuring timely deployment.</p></div>
+                        </div>
+                        <div class="glass p-4 rounded-xl flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-royal/20 flex items-center justify-center shrink-0"><i data-lucide="code" class="w-5 h-5 text-royal"></i></div>
+                            <div><h4 class="font-bold">Clean Code</h4><p class="text-xs text-muted">Maintainable, structured, and modern architecture.</p></div>
+                        </div>
+                        <div class="glass p-4 rounded-xl flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-royal/20 flex items-center justify-center shrink-0"><i data-lucide="smartphone" class="w-5 h-5 text-royal"></i></div>
+                            <div><h4 class="font-bold">Responsive & SEO Friendly</h4><p class="text-xs text-muted">Perfect on all devices with high search visibility.</p></div>
+                        </div>
+                        <div class="glass p-4 rounded-xl flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-royal/20 flex items-center justify-center shrink-0"><i data-lucide="trending-up" class="w-5 h-5 text-royal"></i></div>
+                            <div><h4 class="font-bold">Business Focused</h4><p class="text-xs text-muted">Solutions designed to drive revenue and growth.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process -->
+                <div data-aos="fade-left">
+                    <h2 class="text-sm font-bold tracking-widest text-royal uppercase mb-2">Workflow</h2>
+                    <h3 class="text-3xl font-display font-bold text-white mb-8">Work Process</h3>
+                    <div class="relative border-l border-white/10 ml-4 space-y-6 pb-4">
+                        <div class="relative pl-6">
+                            <div class="absolute w-3 h-3 bg-royal rounded-full -left-[6.5px] top-1.5 shadow-[0_0_10px_rgba(37,99,235,0.8)]"></div>
+                            <h4 class="text-lg font-bold text-white">1. Discovery & Planning</h4>
+                            <p class="text-sm text-muted">Understanding requirements, goals, and technical feasibility.</p>
+                        </div>
+                        <div class="relative pl-6">
+                            <div class="absolute w-3 h-3 bg-secondary border border-royal rounded-full -left-[6.5px] top-1.5"></div>
+                            <h4 class="text-lg font-bold text-white">2. UI Design & Prototyping</h4>
+                            <p class="text-sm text-muted">Crafting wireframes and visual concepts.</p>
+                        </div>
+                        <div class="relative pl-6">
+                            <div class="absolute w-3 h-3 bg-secondary border border-royal rounded-full -left-[6.5px] top-1.5"></div>
+                            <h4 class="text-lg font-bold text-white">3. Development</h4>
+                            <p class="text-sm text-muted">Writing clean code, integrating APIs, and building architecture.</p>
+                        </div>
+                        <div class="relative pl-6">
+                            <div class="absolute w-3 h-3 bg-secondary border border-royal rounded-full -left-[6.5px] top-1.5"></div>
+                            <h4 class="text-lg font-bold text-white">4. Testing & Deployment</h4>
+                            <p class="text-sm text-muted">Rigorous QA, followed by seamless server deployment.</p>
+                        </div>
+                        <div class="relative pl-6">
+                            <div class="absolute w-3 h-3 bg-secondary border border-royal rounded-full -left-[6.5px] top-1.5"></div>
+                            <h4 class="text-lg font-bold text-white">5. Support</h4>
+                            <p class="text-sm text-muted">Ongoing maintenance and scalable updates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Certifications -->
+    <section id="experience" class="py-24 bg-secondary/20 z-content relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Timeline -->
+                <div>
+                    <h2 class="text-sm font-bold tracking-widest text-royal uppercase mb-2">History</h2>
+                    <h3 class="text-3xl font-display font-bold text-white mb-8">Professional Experience</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="glass p-6 rounded-2xl relative overflow-hidden group" data-aos="fade-up">
+                            <div class="absolute top-0 left-0 w-1 h-full bg-royal"></div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="text-xl font-bold">Freelance Developer</h4>
+                                <span class="text-xs text-gold border border-gold/30 px-2 py-1 rounded-full bg-gold/10">Present</span>
+                            </div>
+                            <p class="text-royal text-sm mb-4">Web Application Development & Business Solutions</p>
+                            <p class="text-sm text-muted leading-relaxed">
+                                Partnering with clients globally to build custom, highly scalable software. Leveraging Python/Django for robust data processing and modern frontend stacks (React/HTMX) for engaging user experiences. Continuously learning and integrating modern technologies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonials -->
+                <div>
+                    <h2 class="text-sm font-bold tracking-widest text-royal uppercase mb-2">Feedback</h2>
+                    <h3 class="text-3xl font-display font-bold text-white mb-8">Client Testimonials</h3>
+                    
+                    <div class="glass-card p-8 rounded-2xl relative" data-aos="fade-up" data-aos-delay="100">
+                        <i data-lucide="quote" class="absolute top-6 right-6 w-12 h-12 text-white/5"></i>
+                        <div class="flex gap-1 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-gold text-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold text-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold text-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold text-gold"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-gold text-gold"></i>
+                        </div>
+                        <p class="text-white/90 italic mb-6 relative z-10 text-lg">
+                            "Abdoulwahab completely transformed our business operations. The custom dashboard and booking system he built is fast, reliable, and looks incredibly premium. Highly recommended!"
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-royal to-purple-600 flex items-center justify-center font-bold text-lg">JD</div>
+                            <div>
+                                <h5 class="font-bold text-white">Anonymous Client</h5>
+                                <p class="text-xs text-muted">Business Owner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 z-content relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-royal/5 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold tracking-widest text-royal uppercase mb-2">Get In Touch</h2>
+                <h3 class="text-3xl md:text-5xl font-display font-bold text-white mb-4">Let's Build Something Great</h3>
+                <p class="text-muted">Ready to start your next project? Reach out and let's discuss how I can help bring your vision to life.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Contact Info -->
+                <div class="lg:col-span-1 space-y-6" data-aos="fade-right">
+                    <div class="glass p-6 rounded-2xl flex items-start gap-4 hover:border-royal/50 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-royal/20 flex items-center justify-center shrink-0"><i data-lucide="mail" class="w-6 h-6 text-royal"></i></div>
+                        <div>
+                            <h4 class="text-sm text-muted mb-1">Email</h4>
+                            <a href="mailto:contact@abdoulwahaboumar.com" class="text-white font-medium hover:text-royal transition-colors break-all">contact@abdoulwahaboumar.com</a>
+                        </div>
+                    </div>
+                    <div class="glass p-6 rounded-2xl flex items-start gap-4 hover:border-green-500/50 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center shrink-0"><i data-lucide="phone" class="w-6 h-6 text-green-500"></i></div>
+                        <div>
+                            <h4 class="text-sm text-muted mb-1">Phone & WhatsApp</h4>
+                            <a href="https://wa.me/237693149222" target="_blank" class="text-white font-medium hover:text-green-400 transition-colors">+237 693 149 222</a>
+                        </div>
+                    </div>
+                    <div class="glass p-6 rounded-2xl flex items-start gap-4 hover:border-gold/50 transition-colors">
+                        <div class="w-12 h-12 rounded-xl bg-gold/20 flex items-center justify-center shrink-0"><i data-lucide="map-pin" class="w-6 h-6 text-gold"></i></div>
+                        <div>
+                            <h4 class="text-sm text-muted mb-1">Location</h4>
+                            <p class="text-white font-medium">Cameroon (Available Worldwide)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-2 glass-card p-8 rounded-3xl" data-aos="fade-left">
+                    <form id="contact-form" onsubmit="sendWhatsApp(event)" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium text-white/80">Name</label>
+                                <input type="text" name="name" required class="w-full bg-primary/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-royal focus:ring-1 focus:ring-royal transition-all">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium text-white/80">Email</label>
+                                <input type="email" name="email" required class="w-full bg-primary/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-royal focus:ring-1 focus:ring-royal transition-all">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium text-white/80">Phone</label>
+                                <input type="tel" name="phone" required class="w-full bg-primary/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-royal focus:ring-1 focus:ring-royal transition-all">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium text-white/80">Project Type</label>
+                                <select name="project_type" required class="w-full bg-primary/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-royal focus:ring-1 focus:ring-royal transition-all appearance-none">
+                                    <option value="Web Application">Web Application</option>
+                                    <option value="Ecommerce">Ecommerce</option>
+                                    <option value="Dashboard">Dashboard</option>
+                                    <option value="Portfolio / Corporate">Portfolio / Corporate</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-white/80">Budget</label>
+                            <select name="budget" required class="w-full bg-primary/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-royal focus:ring-1 focus:ring-royal transition-all appearance-none">
+                                <option value="Under $500">Under $500</option>
+                                <option value="$500 - $1,000">$500 - $1,000</option>
+                                <option value="$1,000 - $5,000">$1,000 - $5,000</option>
+                                <option value="$5,000+">$5,000+</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-white/80">Message</label>
+                            <textarea name="message" rows="4" required class="w-full bg-primary/50 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-royal focus:ring-1 focus:ring-royal transition-all resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-royal hover:bg-blue-600 text-white font-bold transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] flex items-center justify-center gap-2 group">
+                            Send Message via WhatsApp <i data-lucide="send" class="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-secondary/30 pt-16 pb-8 z-content relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#" class="text-2xl font-display font-bold inline-block mb-4">
+                        <span class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center border border-white/10">
+                            <span class="text-gradient-gold">AO</span>
+                        </span>
+                    </a>
+                    <p class="text-muted max-w-sm mb-6">Building enterprise-quality, scalable, and modern web applications with passion and precision.</p>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/abdoulwahaboumar" target="_blank" class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/80 hover:text-white hover:bg-white/10 transition-all"><i data-lucide="github" class="w-5 h-5"></i></a>
+                        <a href="https://linkedin.com/in/abdoulwahaboumar" target="_blank" class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/80 hover:text-white hover:bg-blue-500 transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="https://wa.me/237693149222" target="_blank" class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/80 hover:text-white hover:bg-green-500 transition-all"><i data-lucide="phone" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/80 hover:text-white hover:bg-blue-600 transition-all"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/80 hover:text-white hover:bg-pink-600 transition-all"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-muted">
+                        <li><a href="#about" class="hover:text-royal transition-colors">About Me</a></li>
+                        <li><a href="#services" class="hover:text-royal transition-colors">Services</a></li>
+                        <li><a href="#projects" class="hover:text-royal transition-colors">Portfolio</a></li>
+                        <li><a href="#experience" class="hover:text-royal transition-colors">Experience</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-white mb-4">Technologies</h4>
+                    <ul class="space-y-2 text-sm text-muted">
+                        <li>Python & Django</li>
+                        <li>React & JavaScript</li>
+                        <li>HTMX & Alpine.js</li>
+                        <li>WebSockets</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/10 text-center flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted">
+                <p>&copy; 2026 Abdoulwahab Oumar. All Rights Reserved.</p>
+                <p>Designed with <i data-lucide="heart" class="w-4 h-4 inline text-red-500 fill-red-500 mx-1"></i> in Cameroon.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    
+    <!-- WhatsApp Floating -->
+    <a href="https://wa.me/237693149222" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-green-500 flex items-center justify-center text-white shadow-[0_0_20px_rgba(34,197,94,0.5)] z-50 hover:scale-110 transition-transform animate-pulse-glow group">
+        <i data-lucide="message-circle" class="w-7 h-7 group-hover:animate-bounce"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="fixed bottom-24 right-6 w-12 h-12 rounded-full glass hidden items-center justify-center text-white/80 hover:text-white hover:bg-white/10 transition-all z-50">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Initialize AOS Animation
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // Typing Animation
+        const textArray = ["Python Developer", "Django Developer", "React Developer", "HTMX Developer", "Alpine.js Developer", "WebSocket Developer", "Backend Engineer"];
+        let textIndex = 0;
+        let charIndex = 0;
+        const typeSpeed = 100;
+        const eraseSpeed = 50;
+        const delayBetweenWords = 2000;
+        const typewriterElement = document.getElementById("typewriter");
+
+        function type() {
+            if (charIndex < textArray[textIndex].length) {
+                typewriterElement.textContent += textArray[textIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typeSpeed);
+            } else {
+                setTimeout(erase, delayBetweenWords);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                typewriterElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, eraseSpeed);
+            } else {
+                textIndex = (textIndex + 1) % textArray.length;
+                setTimeout(type, typeSpeed);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            if(typewriterElement) setTimeout(type, 3000); // Wait for loader
+        });
+
+        // Scroll Progress & Back To Top
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+
+            // Back to top visibility
+            let backToTop = document.getElementById("backToTop");
+            if (winScroll > 500) {
+                backToTop.style.display = "flex";
+            } else {
+                backToTop.style.display = "none";
+            }
+
+            // Navbar Glass Effect
+            let navbar = document.getElementById("navbar");
+            if (winScroll > 50) {
+                navbar.classList.add("bg-primary/80");
+                navbar.classList.remove("border-transparent");
+            } else {
+                navbar.classList.remove("bg-primary/80");
+            }
+        };
+
+        document.getElementById("backToTop").addEventListener("click", () => {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+
+        // WhatsApp Form Submission Logic
+        function sendWhatsApp(event) {
+            event.preventDefault();
+            const form = event.target;
+            const name = encodeURIComponent(form.name.value);
+            const email = encodeURIComponent(form.email.value);
+            const phone = encodeURIComponent(form.phone.value);
+            const projectType = encodeURIComponent(form.project_type.value);
+            const budget = encodeURIComponent(form.budget.value);
+            const message = encodeURIComponent(form.message.value);
+
+            const text = `Hello Abdoulwahab Oumar,%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AProject Type: ${projectType}%0ABudget: ${budget}%0A%0AMessage:%0A${message}%0A%0AI would like to discuss a project with you.`;
+
+            window.open(`https://wa.me/237693149222?text=${text}`, '_blank');
+        }
+
+        // Mouse Glow Effect
+        const glow = document.getElementById('mouse-glow');
+        document.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+
+        // Counters Animation (Intersection Observer)
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        const animateCounters = (entries, observer) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    const counter = entry.target;
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText;
+                        const inc = target / speed;
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + inc);
+                            setTimeout(updateCount, 10);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+        };
+
+        const counterObserver = new IntersectionObserver(animateCounters, { threshold: 0.5 });
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+        // Simple Particles Background (Vanilla JS Canvas)
+        const canvas = document.getElementById("particles-canvas");
+        const ctx = canvas.getContext("2d");
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let particlesArray;
+
+        class Particle {
+            constructor(x, y, directionX, directionY, size, color) {
+                this.x = x;
+                this.y = y;
+                this.directionX = directionX;
+                this.directionY = directionY;
+                this.size = size;
+                this.color = color;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+            update() {
+                if (this.x > canvas.width || this.x < 0) {
+                    this.directionX = -this.directionX;
+                }
+                if (this.y > canvas.height || this.y < 0) {
+                    this.directionY = -this.directionY;
+                }
+                this.x += this.directionX;
+                this.y += this.directionY;
+                this.draw();
+            }
+        }
+
+        function init() {
+            particlesArray = [];
+            let numberOfParticles = (canvas.height * canvas.width) / 15000;
+            if(window.innerWidth < 768) numberOfParticles = 20; // Mobile optimization
+            
+            for (let i = 0; i < numberOfParticles; i++) {
+                let size = (Math.random() * 2) + 0.5;
+                let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                let directionX = (Math.random() * 0.4) - 0.2;
+                let directionY = (Math.random() * 0.4) - 0.2;
+                let color = 'rgba(255, 255, 255, 0.1)';
+                particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+            }
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, innerWidth, innerHeight);
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+            }
+        }
+
+        window.addEventListener('resize', function() {
+            canvas.width = innerWidth;
+            canvas.height = innerHeight;
+            init();
+        });
+
+        init();
+        animate();
+
+    </script>
+</body>
+</html>
